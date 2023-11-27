@@ -1,0 +1,191 @@
+@import url(https://fonts.googleapis.com/css2?family=Unbounded:wght@800&display=swap)
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap')
+
+// color pallete
+
+$--color-primary: #87EAFF
+$--color-primary-orange: #FF8A00
+$--color-secondary: #000062         
+
+a
+  text-decoration: none
+  color: inherit
+
+header
+  font-family: unbounded
+  font-size: 75px
+  font-weight: bold
+  text-transform: uppercase
+  margin: 0
+
+h1
+  font-family: unbounded
+  font-size: 50px
+  font-weight: bold
+  text-transform: uppercase
+  margin: 0
+
+h2
+  font-family: inter
+  font-size: 26px
+  margin: 0
+  color: black
+
+h3
+  font-family: inter
+  font-size: 24px
+  margin: 0
+  color: black
+
+h4
+  font-family: inter
+  font-size: 18px
+  margin: 0
+  color: black
+
+p
+  font-family: inter
+  color: black
+  font-size: 16px
+
+@media screen and (max-width: 1360px) 
+  header
+    font-size: 50px
+  h1
+    font-size: 40px
+  h2
+    font-size: 18px
+  h4
+    font-size: 16px
+  p
+    font-size: 14px
+    
+
+@media screen and (max-width: 840px) 
+  header
+    font-size: 35px
+  h1
+    font-size: 30px
+  h2
+    font-size: 16px
+  h4
+    font-size: 14px  
+  p
+    font-size: 12px
+
+
+@media screen and (max-width: 580px) 
+  header
+    font-size: 30px
+  h1
+    font-size: 20px
+  h2
+    font-size: 16px
+  h4
+    font-size: 14px  
+  p
+    font-size: 10px
+
+
+body 
+  text-rendering: optimizeLegibility
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  background-image: url("Background-brainwave.png")
+
+.hero-container
+    height: 100vh
+    
+.text
+    top: 42%
+    text-align: center
+    text-transform: uppercase
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    &--svg--container
+        overflow: hidden
+        position: absolute
+        width: 85%
+        z-index: -1
+        svg
+            width: inherit
+            opacity: 0.4
+            z-index: -1
+            justify-content: center
+            align-items: center
+            line
+                opacity: 1
+                stroke-dasharray: 2000
+                stroke-dashoffset: 2000
+
+.cta-container-explorebrainwave
+  position: absolute
+  top: 70%
+  left: 43%
+
+.cta-container-button
+  display: flex
+  align-items: center
+  justify-content: space-between
+  gap: 3em
+  padding: 0.2em 1.5em 0.2em 1.5em
+  border-radius: 12px
+  border: none
+  background: #000062
+  cursor: pointer
+  &-text
+    color: white
+    text-transform: uppercase
+  &-image
+    display: flex
+    align-items: center
+    background: white
+    width: 28px
+    height: 28px
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    transition: transform 0.3s
+
+.cta-inline
+  margin-top: 1em
+
+.cta-container-button:hover .cta-container-button-image
+  transform: translateX(8px)
+
+.main-text-container
+  justify-content: space-between
+  display: flex
+  flex-direction: column
+  justify-content: center
+  gap: 100px
+  &-row
+    padding: 200px 18% 0px 18%
+    display: flex
+    gap: 3em
+    flex-wrap: nowrap
+    &-left
+      display: flex
+      flex-direction: column
+      gap: 1em
+      width: 50%
+    &-right
+      img
+        border-radius: 12px
+        width: 100%
+  &-column
+    padding: 200px 0% 0% 0%
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 3em
+
+@media screen and (max-width: 1360px) 
+  .main-text-container-row
+    flex-wrap: wrap
+    justify-content: center
+    &-left
+      width: 100%
