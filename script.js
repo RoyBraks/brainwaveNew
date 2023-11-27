@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const lines = document.querySelectorAll('.text--svg--animated-line');
+    const lines = document.querySelectorAll('.animate-line');
     const textHeader = document.querySelectorAll('.text--header');
     const ctaHero = document.querySelectorAll('.cta-container-explorebrainwave')
 

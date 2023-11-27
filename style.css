@@ -1,6 +1,11 @@
 @import url(https://fonts.googleapis.com/css2?family=Unbounded:wght@800&display=swap);
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -107,11 +112,16 @@ body {
   background-image: url("Background-brainwave.png");
 }
 
+.animate-line {
+  opacity: 1;
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+}
+
 .hero-container {
   height: 100vh;
 }
-
-.text {
+.hero-container-text {
   top: 42%;
   text-align: center;
   text-transform: uppercase;
@@ -120,23 +130,18 @@ body {
   justify-content: center;
   align-items: center;
 }
-.text--svg--container {
+.hero-container-text--svg--container {
   overflow: hidden;
   position: absolute;
   width: 85%;
   z-index: -1;
 }
-.text--svg--container svg {
+.hero-container-text--svg--container svg {
   width: inherit;
   opacity: 0.4;
   z-index: -1;
   justify-content: center;
   align-items: center;
-}
-.text--svg--container svg line {
-  opacity: 1;
-  stroke-dasharray: 2000;
-  stroke-dashoffset: 2000;
 }
 
 .cta-container-explorebrainwave {
@@ -215,8 +220,143 @@ body {
   .main-text-container-row {
     flex-wrap: wrap;
     justify-content: center;
-  }
-  .main-text-container-row-left {
     width: 100%;
   }
+}
+.navbar {
+  z-index: 1;
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  padding: 20px 50px;
+  top: 0;
+  left: 0;
+  width: 95%;
+}
+.navbar a {
+  cursor: pointer;
+}
+.navbar img {
+  width: 150px;
+}
+.navbar li {
+  text-transform: uppercase;
+  display: table-cell;
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.blogpage-main-title {
+  z-index: -1;
+}
+.blogpage-main-title-text {
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 150px 18% 0px 18%;
+}
+.blogpage-main-title-text-backbutton {
+  margin-bottom: 18px;
+  width: 50px;
+}
+.blogpage-main-title-text-backbutton button {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.blogpage-main-title-text-backbutton button svg {
+  fill: #87EAFF;
+}
+.blogpage-main-title-text--svg--container {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.blogpage-main-title-text--svg--container svg {
+  width: 100%;
+  opacity: 0.4;
+  z-index: -1;
+  justify-content: center;
+  align-items: center;
+}
+.blogpage-main-title-text--svg--container svg line {
+  opacity: 1;
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+}
+
+.blog-text {
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 0 0 50px white;
+  padding: 0 0 100px 0;
+  margin: 150px 18% 40px 18%;
+}
+.blog-text h4 {
+  font-weight: bold;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.blog-text p {
+  font-weight: normal;
+}
+
+.button1 {
+  background: url("blog-kaart-1.png") center;
+  background-size: cover;
+  transform: rotateZ(2deg);
+}
+
+.button2 {
+  background: url("blog-kaart-2.png") center;
+  background-size: cover;
+  transform: rotateZ(-1deg);
+}
+
+.button3 {
+  background: url("blog-kaart-3.png") center;
+  background-size: cover;
+  transform: rotateZ(1deg);
+}
+
+.other-blogs {
+  background-color: white;
+  padding: 90px 18%;
+  margin-bottom: 100px;
+}
+.other-blogs-img {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 30px;
+}
+.other-blogs-img-button {
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  text-align: start;
+}
+.other-blogs-img-button h5 {
+  text-transform: uppercase;
+}
+.other-blogs-img-button h4 {
+  text-transform: uppercase;
+  font-family: unbounded;
 }/*# sourceMappingURL=style.css.map */
