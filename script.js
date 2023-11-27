@@ -3,72 +3,62 @@ document.addEventListener("DOMContentLoaded", function () {
     const textHeader = document.querySelectorAll('.hero-container-text--header');
     const ctaHero = document.querySelectorAll('.cta-container-explorebrainwave')
 
-    const lineAnimation = gsap.timeline({ paused: true });
-    const textAnimation = gsap.timeline({ paused: true });
-    const ctaHeroAnimation = gsap.timeline({ paused: true })
-
+    const heroTimeline = gsap.timeline({ paused: true })
+    
     lines.forEach((line) => {
-        lineAnimation.to(line, {
-            duration: 0.2,
+        heroTimeline.to(line, {
+            duration: 0.3,
             strokeDashoffset: 0,
-            ease: 'power2.inOut',
         });
-    });
+    });   
 
-    textAnimation.fromTo(
+    heroTimeline.fromTo(
         textHeader,
         { opacity: 0, y: 10 },
-        { opacity: 1, y: 0, duration: 1, ease: 'power2.inOut' }
-    );
+        { opacity: 1, y: 0, duration: 0.5, ease: 'power2.inOut' }
+        );    
+        
+    heroTimeline.fromTo(
+        ctaHero,
+        {opacity: 0, y: 10 },
+        {opacity: 1, y: 0, duration: 0.5, ease: 'power2.inOut' }
+    )
+
+    heroTimeline.play().delay(0.5)
 
     gsap.from(".main-text-container-row-left", {
         scrollTrigger: {
             trigger: ".main-text-container-row-left",
             toggleActions: "restart restart restart restart"
-        },
+        },    
         x: -50,
         opacity: 0,
         duration: 1,
         ease: 'power2.Out'
-    })
+    })    
 
     gsap.from(".main-text-container-row-right", {
         scrollTrigger: {
             trigger: ".main-text-container-row-right",
             toggleActions: "restart restart restart restart"
-        },
+        },    
         x: 50,
         opacity: 0,
         duration: 1,
         ease: 'power2.Out'
-    })
+    })    
 
     gsap.from(".main-text-container-column", {
         scrollTrigger: {
             trigger: ".main-text-container-column",
             toggleActions: "restart restart restart restart"
-        },
+        },    
         y: 50,
         opacity: 0,
         duration: 1,
         ease: 'power2.Out'
-    })
+    })    
 
-    ctaHeroAnimation.fromTo(
-        ctaHero,
-        {opacity: 0, y: 10 },
-        {opacity: 1, y: 0, duration: 1, ease: 'power2.inOut' }
-    )
-
-    setTimeout(function () {
-        lineAnimation.play();
-    });
-    setTimeout(function() {
-        textAnimation.play();
-    }, 100)
-    setTimeout(function() {
-        ctaHeroAnimation.play();
-    }, 600)
 
     let mouseDown = false;
     let startX, scrollLeft;
