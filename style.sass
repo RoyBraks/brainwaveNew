@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap')
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap')
 
+  
+*
+  margin: 0
+  padding: 0
+
 // color pallete
 
 $--color-primary: #87EAFF
@@ -103,7 +108,32 @@ body
   stroke-dasharray: 2000
   stroke-dashoffset: 2000
 
+.animate-line
+  opacity: 1
+  stroke-dasharray: 2000
+  stroke-dashoffset: 2000
+
 .hero-container
+  height: 100vh    
+  &-text
+      top: 42%
+      text-align: center
+      text-transform: uppercase
+      position: relative
+      display: flex
+      justify-content: center
+      align-items: center
+      &--svg--container
+          overflow: hidden
+          position: absolute
+          width: 85%
+          z-index: -1
+          svg
+              width: inherit
+              opacity: 0.4
+              z-index: -1
+              justify-content: center
+              align-items: center
   height: 100vh    
   &-text
       top: 42%
