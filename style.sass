@@ -8,6 +8,10 @@ $--color-primary: #87EAFF
 $--color-primary-orange: #FF8A00
 $--color-secondary: #000062         
 
+*
+  margin: 0
+  padding: 0
+
 a
   text-decoration: none
   color: inherit
@@ -94,44 +98,46 @@ body
   -moz-osx-font-smoothing: grayscale
   background-image: url("Background-brainwave.png")
 
+.animate-line
+  opacity: 1
+  stroke-dasharray: 2000
+  stroke-dashoffset: 2000
+
 .hero-container
-    height: 100vh
-    
-.text
-    top: 42%
-    text-align: center
-    text-transform: uppercase
-    position: relative
-    display: flex
-    justify-content: center
-    align-items: center
-    &--svg--container
-        overflow: hidden
-        position: absolute
-        width: 85%
-        z-index: -1
-        svg
-            width: inherit
-            opacity: 0.4
-            z-index: -1
-            justify-content: center
-            align-items: center
-            line
-                opacity: 1
-                stroke-dasharray: 2000
-                stroke-dashoffset: 2000
+  height: 100vh    
+  &-text
+      top: 42%
+      text-align: center
+      text-transform: uppercase
+      position: relative
+      display: flex
+      justify-content: center
+      align-items: center
+      &--svg--container
+          overflow: hidden
+          position: absolute
+          width: 85%
+          z-index: -1
+          svg
+              width: inherit
+              opacity: 0.4
+              z-index: -1
+              justify-content: center
+              align-items: center
 
 .cta-container-explorebrainwave
+  width: 100%
+  display: flex
+  justify-content: center
   position: absolute
-  top: 70%
-  left: 43%
+  top: 72%
 
 .cta-container-button
   display: flex
   align-items: center
   justify-content: space-between
   gap: 3em
-  padding: 0.2em 1.5em 0.2em 1.5em
+  padding: 0.8em 1.5em 0.8em 1.5em
   border-radius: 12px
   border: none
   background: #000062
@@ -182,7 +188,25 @@ body
     flex-direction: column
     align-items: center
     gap: 3em
-
+    &-top
+      display: flex
+      flex-direction: column
+      align-items: center
+      h4
+        text-align: center
+        width: 45%
+        margin: 1em 0
+    &-bottom
+      width: 100%
+      overflow: hidden
+      &-scroll
+        display: flex
+        cursor: pointer
+        gap: 1em
+        &-img
+          border-radius: 12px
+          
+  
 @media screen and (max-width: 1360px) 
   .main-text-container-row
     flex-wrap: wrap
