@@ -271,6 +271,37 @@ body
     padding-bottom: 20px
   p
     font-weight: normal
+
+.other-blogs 
+  background-color: white
+  padding: 90px 18% 
+  margin-bottom: 100px 
+  &-img 
+    display: flex
+    justify-content: space-between
+    width: 100%
+    margin-top: 30px
+    flex-wrap: wrap
+    gap: 3em
+    justify-content: space-between
+
+.blogbutton 
+  width: 300px
+  height: 300px
+  background-color: white
+  border: none
+  border-radius: 12px
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2)
+  display: flex
+  flex-direction: column
+  padding: 2em
+  text-align: start
+  h5
+    text-transform: uppercase
+  h4
+    text-transform: uppercase
+    font-family: unbounded
+
 .button1
   background: url("blog-kaart-1.png") center 
   background-size: cover
@@ -286,32 +317,44 @@ body
   background-size: cover
   transform: rotateZ(1deg)
 
-.other-blogs 
-  background-color: white
+
+.page-main-title
+  z-index: -1
+  &-text
+    text-transform: uppercase
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding: 150px 18% 0px 18%
+    text-align: center
+    &--svg--container
+        position: absolute
+        width: 100%
+        top: 0
+        left: 0
+        z-index: -1
+        svg
+            width: 100%
+            opacity: 0.4
+            z-index: -1
+            justify-content: center
+            align-items: center
+            line
+                opacity: 1
+                stroke-dasharray: 2000
+                stroke-dashoffset: 2000
+
+.blogs 
   padding: 90px 18% 
   margin-bottom: 100px 
+  text-align: center
   &-img 
     display: flex
     justify-content: space-between
     width: 100%
     margin-top: 30px
-    &-button 
-      width: 300px
-      height: 300px
-      background-color: white
-      border: none
-      border-radius: 12px
-      box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2)
-      display: flex
-      flex-direction: column
-      padding: 2em
-      text-align: start
-      h5
-        text-transform: uppercase
-      h4
-        text-transform: uppercase
-        font-family: unbounded
-
-
-
-
+    margin-bottom: 90px
+    flex-wrap: wrap
+    gap: 3em
+    justify-content: space-between
