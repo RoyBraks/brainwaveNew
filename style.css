@@ -1,6 +1,6 @@
-@import url(https://fonts.googleapis.com/css2?family=Unbounded:wght@800&display=swap);
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -13,22 +13,25 @@ a {
 
 header {
   font-family: unbounded;
-  font-size: 75px;
-  font-weight: bold;
+  font-size: 65px;
+  font-weight: 800;
   text-transform: uppercase;
   margin: 0;
+  word-break: normal;
 }
 
 h1 {
   font-family: unbounded;
   font-size: 50px;
-  font-weight: bold;
+  font-weight: 800;
   text-transform: uppercase;
   margin: 0;
+  word-break: normal;
 }
 
 h2 {
   font-family: inter;
+  font-weight: 300;
   font-size: 26px;
   margin: 0;
   color: black;
@@ -37,6 +40,7 @@ h2 {
 h3 {
   font-family: inter;
   font-size: 24px;
+  font-weight: 300;
   margin: 0;
   color: black;
 }
@@ -44,6 +48,7 @@ h3 {
 h4 {
   font-family: inter;
   font-size: 18px;
+  font-weight: 300;
   margin: 0;
   color: black;
 }
@@ -51,15 +56,18 @@ h4 {
 p {
   font-family: inter;
   color: black;
+  font-weight: 300;
   font-size: 16px;
 }
 
 @media screen and (max-width: 1360px) {
   header {
     font-size: 50px;
+    word-break: break-all;
   }
   h1 {
     font-size: 40px;
+    word-break: break-all;
   }
   h2 {
     font-size: 18px;
@@ -74,9 +82,11 @@ p {
 @media screen and (max-width: 840px) {
   header {
     font-size: 35px;
+    word-break: break-all;
   }
   h1 {
     font-size: 30px;
+    word-break: break-all;
   }
   h2 {
     font-size: 16px;
@@ -123,6 +133,7 @@ body {
 }
 .hero-container-text {
   top: 42%;
+  z-index: 1;
   text-align: center;
   text-transform: uppercase;
   position: relative;
@@ -139,11 +150,126 @@ body {
 .hero-container-text--svg--container svg {
   width: inherit;
   opacity: 0.4;
-  z-index: -1;
   justify-content: center;
   align-items: center;
 }
+.hero-container-nav {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  position: absolute;
+}
+.hero-container-nav-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  height: 80%;
+}
+.hero-container-nav-container-button {
+  position: relative;
+}
+.hero-container-nav-container-button a {
+  text-transform: uppercase;
+  font-size: 25px;
+  position: absolute;
+  z-index: 1;
+}
+.hero-container-nav-container-button a h2 {
+  font-family: caveat;
+  font-weight: bold;
+}
+.hero-container-nav-container-button img {
+  position: absolute;
+  transition: 0.5s;
+  opacity: 0.4;
+  opacity: 0;
+}
 
+.nav-sessions {
+  top: 150px;
+  width: 40%;
+  height: 200px;
+}
+.nav-sessions a {
+  top: 5%;
+}
+.nav-sessions img {
+  width: 40%;
+  right: 30%;
+}
+
+.nav-brainfuel {
+  width: 20%;
+  height: 400px;
+  top: 0;
+  right: 0;
+}
+.nav-brainfuel a {
+  left: 0;
+}
+.nav-brainfuel img {
+  top: 15%;
+  left: 5%;
+}
+
+.nav-overbrainwave {
+  width: 40%;
+  top: 140px;
+  height: 300px;
+}
+.nav-overbrainwave a {
+  right: 0%;
+}
+.nav-overbrainwave img {
+  width: 60%;
+}
+
+.nav-cases {
+  width: 50%;
+  height: 200px;
+}
+.nav-cases a {
+  left: 20%;
+  bottom: 50%;
+}
+.nav-cases img {
+  left: 40%;
+  bottom: 60%;
+}
+
+.nav-contact {
+  width: 50%;
+  height: 200px;
+}
+.nav-contact a {
+  right: 17%;
+  bottom: 40%;
+}
+.nav-contact img {
+  right: 35%;
+  bottom: 50%;
+}
+
+.nav-sessions a:hover + img, .nav-brainfuel a:hover + img, .nav-overbrainwave a:hover + img, .nav-cases a:hover + img, .nav-contact a:hover + img {
+  opacity: 0.4;
+}
+
+@media screen and (max-width: 1360px) {
+  .hero-container-nav {
+    visibility: visible;
+  }
+  .hero-container-nav-container {
+    height: 80%;
+  }
+}
+@media screen and (max-width: 960px) {
+  .hero-container-nav {
+    visibility: hidden;
+  }
+}
 .cta-container-explorebrainwave {
   width: 100%;
   display: flex;
@@ -195,7 +321,7 @@ body {
   gap: 100px;
 }
 .main-text-container-row {
-  padding: 200px 18% 50px 18%;
+  padding: 200px 0% 50px 0%;
   display: flex;
   gap: 3em;
   flex-wrap: nowrap;
@@ -262,7 +388,7 @@ body {
   transform: translateY(2px);
 }
 .footer-content {
-  padding: 100px 18% 50px 18%;
+  padding: 100px 0% 50px 0%;
   background: white;
   display: flex;
   flex-direction: column;
@@ -306,16 +432,17 @@ body {
   display: flex;
   position: absolute;
   justify-content: space-between;
-  padding: 20px 50px;
-  top: 0;
+  top: 20px;
   left: 0;
-  width: 95%;
+  width: 100%;
+  visibility: visible;
 }
 .navbar a {
   cursor: pointer;
 }
 .navbar img {
   width: 150px;
+  margin-left: 20px;
 }
 .navbar li {
   text-transform: uppercase;
@@ -325,6 +452,11 @@ body {
   padding-right: 30px;
 }
 
+@media screen and (max-width: 960px) {
+  .navbar {
+    visibility: hidden;
+  }
+}
 .blogpage-main-title {
   z-index: -1;
 }
@@ -334,7 +466,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 150px 18% 0px 18%;
+  padding: 150px 0% 0px 0%;
 }
 .blogpage-main-title-text-backbutton {
   margin-bottom: 18px;
@@ -376,7 +508,7 @@ body {
 
 .blog-text {
   background-color: white;
-  border-radius: 3px;
+  border-radius: 3px 3px 0px 0px;
   box-shadow: 0 0 0 50px white;
   padding: 0 0 100px 0;
   margin: 150px 18% 40px 18%;
@@ -392,7 +524,7 @@ body {
 
 .other-blogs {
   background-color: white;
-  padding: 90px 18%;
+  padding: 90px 0%;
   margin-bottom: 100px;
 }
 .other-blogs-img {
@@ -401,7 +533,7 @@ body {
   width: 100%;
   margin-top: 30px;
   flex-wrap: wrap;
-  gap: 3em;
+  gap: 2em;
   justify-content: space-between;
 }
 
@@ -415,16 +547,26 @@ body {
   display: flex;
   flex-direction: column;
   padding: 2em;
+  gap: 6px;
   text-align: start;
+  cursor: pointer;
 }
 .blogbutton h5 {
   text-transform: uppercase;
+  font-weight: 300;
 }
 .blogbutton h4 {
   text-transform: uppercase;
   font-family: unbounded;
+  font-weight: 800;
 }
 
+@media screen and (max-width: 1360px) {
+  .blogbutton {
+    width: 250px;
+    height: 250px;
+  }
+}
 .button1 {
   background: url("blog-kaart-1.png") center;
   background-size: cover;
@@ -452,7 +594,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 150px 18% 0px 18%;
+  padding: 150px 0% 0px 0%;
   text-align: center;
 }
 .page-main-title-text--svg--container {
@@ -476,9 +618,12 @@ body {
 }
 
 .blogs {
-  padding: 90px 18%;
+  padding: 90px 0%;
   margin-bottom: 100px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .blogs-img {
   display: flex;
@@ -489,4 +634,16 @@ body {
   flex-wrap: wrap;
   gap: 3em;
   justify-content: space-between;
+}
+
+.main-padding {
+  padding-left: 18%;
+  padding-right: 18%;
+}
+
+@media screen and (max-width: 560px) {
+  .main-padding {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
 }/*# sourceMappingURL=style.css.map */
